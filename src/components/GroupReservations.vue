@@ -2,11 +2,11 @@
   <div class="p-2">
     <div class="container">
       <h2 class="m-3 float-start">Reservations of large groups (7+ people)</h2>
-      <router-link exact to="/" class="btn btn-primary m-4 float-end">
+      <router-link to="/" class="btn btn-primary m-4 float-end">
         Back to bookings
       </router-link>
       <div class="clearfix"></div>
-      <div class="cards" v-for="(booking, index) in bookingList" :key="index">
+      <div class="cards" v-for="(booking, index) in bookingListSlicedHundred" :key="index">
         <div
           v-if="booking.groupSize > 7"
           class="bg-info rounded-3 text-white p-3"
@@ -41,27 +41,21 @@
 </template>
 
 <script>
+import { mapActions, mapGetters } from "vuex";
+
 export default {
   name: "GroupReservations",
-  data() {
-    return {
-      bookingList: [],
-      timer: "",
-    };
-  },
 
   methods: {
-    fetchBookingsList() {
-      fetch("http://localhost:3000/bookings")
-        .then((res) => res.json())
-        .then((data) => (this.bookingList = data.slice(0, 100)))
-        .catch((err) => console.log(err.message));
-    },
+    ...mapActions(["fetchAllBookings"]),
+  },
+
+    computed: {
+    ...mapGetters(["bookingListSlicedHundred"]),
   },
 
   created() {
-    this.fetchBookingsList();
-    this.timer = setInterval(this.fetchBookingsList, 60000);
+    this.fetchAllBookings();
   },
 };
 </script>

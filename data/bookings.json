@@ -10,7 +10,8 @@
       "deals": [
         "bowling",
         "dinner"
-      ]
+      ],
+      "reasonStatus": ""
     },
     {
       "id": "01272e35-9ef5-4176-b044-0a86def29c1f",
@@ -21,7 +22,8 @@
       "name": "Gerda Wevendael",
       "deals": [
         "bowling"
-      ]
+      ],
+      "reasonStatus": ""
     },
     {
       "id": "d74171d5-f978-45c2-bda7-b63e2f984e7d",
@@ -32,7 +34,8 @@
       "name": "Rachid Al-Hadithi",
       "deals": [
         "group-bowling"
-      ]
+      ],
+      "reasonStatus": ""
     },
     {
       "id": "d1fece5c-7e8f-46d8-b50f-ed96ae82db12",
@@ -43,7 +46,8 @@
       "name": "Patrick den Overste",
       "deals": [
         "bowling"
-      ]
+      ],
+      "reasonStatus": ""
     },
     {
       "id": "0d0e5755-46ca-498d-be3a-135b03f06214",
@@ -54,7 +58,8 @@
       "name": null,
       "deals": [
         "dinner"
-      ]
+      ],
+      "reasonStatus": ""
     },
     {
       "id": "7a463d41-aa30-457a-9e05-64b8ca5d5ceb",
@@ -66,7 +71,8 @@
       "deals": [
         "bowling",
         "dinner"
-      ]
+      ],
+      "reasonStatus": ""
     },
     {
       "id": "ea802f56-78ef-44ef-8b10-04fbb8bb0a97",
@@ -77,7 +83,8 @@
       "name": "Francé d\\'Lamouge",
       "deals": [
         "bowling-disco"
-      ]
+      ],
+      "reasonStatus": ""
     },
     {
       "id": "5bb0e279-aa76-4ecd-ade2-7155bce91854",
@@ -88,7 +95,8 @@
       "name": "Peter Groenezoon",
       "deals": [
         "bowling-with-bitterballen"
-      ]
+      ],
+      "reasonStatus": ""
     },
     {
       "id": "de8162b6-b706-497c-9a63-8487af53f961",
@@ -99,7 +107,8 @@
       "name": "Maria Bakkerszoon",
       "deals": [
         "group-bowling-with-dinner"
-      ]
+      ],
+      "reasonStatus": ""
     },
     {
       "id": "31e9ee33-40cb-44bb-b98b-fc95ebef55ad",
@@ -110,7 +119,8 @@
       "name": "Гарри Кимович Каспаров",
       "deals": [
         "bowling"
-      ]
+      ],
+      "reasonStatus": ""
     },
     {
       "id": "b50761c1-dea1-4a29-995f-a171ec4e96a9",
@@ -121,7 +131,8 @@
       "name": "alert(\"lets see if we can hack this site...\")",
       "deals": [
         "bowling"
-      ]
+      ],
+      "reasonStatus": ""
     },
     {
       "id": "a44c9a6c-9b6b-45c1-a880-7d42d4437480",
@@ -133,7 +144,8 @@
       "deals": [
         "bowling",
         "dinner"
-      ]
+      ],
+      "reasonStatus": ""
     },
     {
       "id": "741ddffe-4074-4787-a9f5-57b2567da91c",
@@ -145,7 +157,8 @@
       "deals": [
         "bowling",
         "dinner"
-      ]
+      ],
+      "reasonStatus": ""
     },
     {
       "id": "610c3f37-3662-4821-827c-4d419d84043b",
@@ -156,7 +169,8 @@
       "name": "Jane Doe",
       "deals": [
         "bowling"
-      ]
+      ],
+      "reasonStatus":  ""
     },
     {
       "id": "e93a5e7f-7092-4992-a93d-245ea5b9bf08",
@@ -167,7 +181,8 @@
       "name": "T.",
       "deals": [
         "bowling"
-      ]
+      ],
+      "reasonStatus": ""
     },
     {
       "id": "fe0bdeab-235f-4869-bb4c-f14473ff2a98",
@@ -178,7 +193,8 @@
       "name": "Marco de la Cruz",
       "deals": [
         "bowling-with-bitterballen"
-      ]
+      ],
+      "reasonStatus": ""
     },
     {
       "id": "fa20b472-ce62-48fc-9a6e-8224a80f249e",
@@ -189,7 +205,8 @@
       "name": "Penelope von Greutzhause-Mariennedijkstra",
       "deals": [
         "bowling"
-      ]
+      ],
+      "reasonStatus": "reason added by Sasho"
     },
     {
       "id": "ec8ccca2-af02-483a-83dd-470089b7b87c",
@@ -201,7 +218,8 @@
       "deals": [
         "bowling",
         "dinner"
-      ]
+      ],
+      "reasonStatus": ""
     },
     {
       "id": "40975d2d-3de9-4c8d-b6d0-7ffde30baa2e",
@@ -212,7 +230,8 @@
       "name": "Dennis Lors",
       "deals": [
         "group-bowling"
-      ]
+      ],
+      "reasonStatus": ""
     },
     {
       "id": "033ff845-f3d4-47a7-830a-e57c64164048",
@@ -223,7 +242,8 @@
       "name": "Kamil Louati",
       "deals": [
         "dinner"
-      ]
+      ],
+      "reasonStatus": ""
     }
  
   ]

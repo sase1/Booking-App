@@ -9,7 +9,7 @@ Vue.use(VueRouter);
 
 const routes = [
   {
-    path: "/",
+    path: "/bookings",
     name: "Home",
     component: Home,
   },
@@ -28,6 +28,10 @@ const routes = [
     path: "/alerts",
     name: "Alerts",
     component: Alerts,
+  },
+  {
+    path: "/",
+    redirect: "/bookings",
   },
 ];
 

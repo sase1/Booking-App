@@ -6,7 +6,7 @@
         <div class="card-body row1">
           <h4 class="card-title">Current Day's Bookings</h4>
           <p class="card-text text-center display-3 mt-4">
-            {{ dataInfo[0].kpis.bookings.madeThisDay }}
+            {{ dataList.kpis.bookings.madeThisDay }}
           </p>
         </div>
       </div>
@@ -16,7 +16,7 @@
         <div class="card-body row1">
           <h4 class="card-title">Current Week's Bookings</h4>
           <p class="card-text text-center display-3 mt-4">
-            {{ dataInfo[0].kpis.bookings.madeThisWeek }}
+            {{ dataList.kpis.bookings.madeThisWeek }}
           </p>
         </div>
       </div>
@@ -28,15 +28,14 @@
           <p class="card-text text-center display-3 mt-4">
             {{
               Math.round(
-                dataInfo[0].kpis.howBusyIsItFactor.thisDay *
-                  dataInfo[0].kpis.bookings.madeThisDay
+                dataList.kpis.howBusyIsItFactor.thisDay *
+                  dataList.kpis.bookings.madeThisDay
               )
             }}
           </p>
         </div>
       </div>
     </div>
-
     <div class="col-md-3">
       <div class="card">
         <div class="card-body row1">
@@ -44,8 +43,8 @@
           <p class="card-text text-center display-3 mt-4">
             {{
               Math.round(
-                dataInfo[0].kpis.howBusyIsItFactor.thisWeek *
-                  dataInfo[0].kpis.bookings.madeThisWeek
+                dataList.kpis.howBusyIsItFactor.thisWeek *
+                  dataList.kpis.bookings.madeThisWeek
               )
             }}
           </p>
@@ -56,19 +55,21 @@
 </template>
 
 <script>
+import { mapActions, mapGetters } from "vuex";
+
 export default {
   name: "TopBar",
-  data() {
-    return {
-      dataInfo: [],
-    };
+
+  computed: {
+    ...mapGetters(["dataList"]),
+  },
+
+  methods: {
+    ...mapActions(["fetchAllDataTopBar"]),
   },
 
   created() {
-    fetch("http://localhost:4000/data")
-      .then((res) => res.json())
-      .then((data) => (this.dataInfo = data))
-      .catch((err) => console.log(err.message));
+    this.fetchAllDataTopBar();
   },
 };
 </script>

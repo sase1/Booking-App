@@ -20,7 +20,7 @@ json-server --watch data/bookings.json
 
 ## Project setup - run the data of data.json file so that you can see topbar info
 ```
-json-server --port 4000 --watch data/data.json
+json-server --port 4000 --watch data/stats.json
 ```
 
 

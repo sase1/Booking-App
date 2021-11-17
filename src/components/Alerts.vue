@@ -2,27 +2,26 @@
   <div class="p-2">
     <div class="container">
       <h2 class="m-3 float-start">Booking Alerts</h2>
-      <router-link exact to="/" class="btn btn-primary m-4 float-end">
+      <router-link to="/" class="btn btn-primary m-4 float-end">
         Back to bookings
       </router-link>
       <div class="clearfix"></div>
-      <div class="cards" v-for="(booking, index) in bookingList" :key="index">
+      <div class="cards" v-for="(booking, index) in bookingListSlicedHundred" :key="index">
         <div
-          v-if="
-            booking.name == null ||
-            booking.name.includes('alert') ||
-            booking.groupSize < 1
-          "
+          v-if="booking.reasonStatus"
           class="bg-info rounded-3 text-white p-3"
         >
+        <h2 v-if="booking.reasonStatus !== ''">
+            Reason: <span class="reason">{{ booking.reasonStatus }}</span>
+          </h2>
+          <hr>
           <h4>
             Booking Number: <span class="display-6 float-end">{{ index }}</span>
           </h4>
           <br />
           <hr />
           <h4>Name:</h4>
-          <p class="bg-danger" v-if="booking.name == null">No name</p>
-          <p v-else>{{ booking.name }}</p>
+          <p>{{ booking.name }}</p>
           <hr />
           <h4>Deal/s: {{ booking.deals.length }}</h4>
           {{ booking.deals.join(",   ").replaceAll("-", "  ") }}<br />
@@ -46,27 +45,20 @@
 </template>
 
 <script>
+import { mapActions, mapGetters } from "vuex";
 export default {
   name: "Alerts",
-  data() {
-    return {
-      bookingList: [],
-      timer: "",
-    };
-  },
 
   methods: {
-    fetchBookingsList() {
-      fetch("http://localhost:3000/bookings")
-        .then((res) => res.json())
-        .then((data) => (this.bookingList = data.slice(0, 100)))
-        .catch((err) => console.log(err.message));
-    },
+    ...mapActions(["fetchAlerts"]),
+  },
+
+   computed: {
+    ...mapGetters(["bookingListSlicedHundred"]),
   },
 
   created() {
-    this.fetchBookingsList();
-    this.timer = setInterval(this.fetchBookingsList, 60000);
+    this.fetchAlerts();
   },
 };
 </script>
@@ -87,5 +79,11 @@ export default {
 div > div.empty {
   height: 0px;
   margin: 0;
+}
+
+span.reason{
+  font-weight: bold;
+  color: brown;
+  font-size: 22px;
 }
 </style>
